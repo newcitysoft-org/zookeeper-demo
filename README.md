@@ -4,7 +4,7 @@ demo项目
 ## 一、Zookeeper安装与使用
 
 ### 1、下载与安装
-进入一下网址：[](https://archive.apache.org/dist/zookeeper/)，获取最新版本的Zookeeper压缩包，zookeeper-3.4.9.tar.gz，解压可以看到可执行文件、文档、源码、jar包等文件。
+进入一下网址：[https://archive.apache.org/dist/zookeeper/](https://archive.apache.org/dist/zookeeper/)，获取最新版本的Zookeeper压缩包，zookeeper-3.4.9.tar.gz，解压可以看到可执行文件、文档、源码、jar包等文件。
 Linux系统安装：
 1.下载压缩包到指定目录
 Cd命令切换到指定命令，使用以下命令下载。
