@@ -41,15 +41,25 @@ bin/zkServer.sh start-foreground
 ### 3、简单命令
 #### (1).列出根目录所有znode
 命令： ls /
+
 ![](file/comand1.png)
+
 #### (2).创建znode
 命令：create /workers ""
 
 含义：创建名为“workers”的znode，并存储空字符串数据。
 
+![](file/comand2.png)
+
 #### (3).删除znode
 命令：delete /workers
 
+![](file/comand3.png)
+
 #### (4).退出命令（quit）
 
+![](file/comand4.png)
+
 #### (5).ZooKeeper服务器（bin/zkServer.sh stop）
+
+![](file/comand5.png)
