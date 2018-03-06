@@ -1,11 +1,10 @@
 package com.newcitysoft.study.zookeeper.module.technology.nio;
 
 import java.io.IOException;
-import java.net.ServerSocket;
+import java.net.InetSocketAddress;
 import java.net.Socket;
 import java.nio.channels.SelectionKey;
 import java.nio.channels.Selector;
-import java.nio.channels.ServerSocketChannel;
 import java.nio.channels.SocketChannel;
 import java.util.Iterator;
 import java.util.Set;
@@ -70,12 +69,12 @@ public class SelectorDemo {
     }
 
     public static void main(String[] args) throws IOException {
-        ServerSocket serverSocket = new ServerSocket(1000);
-        ServerSocketChannel serverSocketChannel =  serverSocket.getChannel();
+        SocketChannel socketChannel = SocketChannel.open();
+        socketChannel.connect(new InetSocketAddress("127.0.0.1", 5555));
         Selector selector = Selector.open();
 
-        serverSocketChannel.configureBlocking(false);
-        SelectionKey key = serverSocketChannel.register(selector, SelectionKey.OP_READ);
+        socketChannel.configureBlocking(false);
+        SelectionKey key = socketChannel.register(selector, SelectionKey.OP_READ);
 
         while(true){
             int readyChannels = selector.select();
