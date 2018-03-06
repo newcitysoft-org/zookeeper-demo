@@ -1,4 +1,4 @@
-package com.newcitysoft.study.zookeeper.module.scene.socket.demo1;
+package com.newcitysoft.study.zookeeper.module.scene.socket.simple.demo1;
 
 import java.io.DataInputStream;
 import java.io.FileOutputStream;

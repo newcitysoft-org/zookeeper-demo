@@ -1,4 +1,4 @@
-package com.newcitysoft.study.zookeeper.module.scene.socket.demo3;
+package com.newcitysoft.study.zookeeper.module.scene.socket.simple.demo3;
 
 import java.io.IOException;
 import java.net.InetAddress;

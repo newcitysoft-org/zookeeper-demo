@@ -5,6 +5,7 @@ import java.io.IOException;
 import java.io.RandomAccessFile;
 import java.nio.ByteBuffer;
 import java.nio.channels.FileChannel;
+import java.nio.charset.Charset;
 
 /**
  * @author lixin.tian@renren-inc.com
@@ -12,9 +13,10 @@ import java.nio.channels.FileChannel;
  */
 public class FileChannelDemo {
 
+    private static final Charset charset = Charset.forName("GBK");
     public static void main(String[] args){
         try {
-            RandomAccessFile aFile = new RandomAccessFile("data/nio-data.txt", "rw");
+            RandomAccessFile aFile = new RandomAccessFile("D:\\data\\123.txt", "rw");
             FileChannel inChannel = aFile.getChannel();
             ByteBuffer buf = ByteBuffer.allocate(48);
             int bytesRead = inChannel.read(buf);
@@ -23,7 +25,7 @@ public class FileChannelDemo {
                 System.out.println("Read " + bytesRead);
                 buf.flip();
                 while(buf.hasRemaining()){
-                    System.out.print((char) buf.get());
+                    System.out.print(buf.get());
                 }
                 buf.clear();
                 bytesRead = inChannel.read(buf);

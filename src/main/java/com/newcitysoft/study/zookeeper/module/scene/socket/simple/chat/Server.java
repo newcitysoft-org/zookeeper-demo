@@ -1,4 +1,4 @@
-package com.newcitysoft.study.zookeeper.module.scene.socket.chat;
+package com.newcitysoft.study.zookeeper.module.scene.socket.simple.chat;
 
 import java.io.BufferedReader;
 import java.io.IOException;
