@@ -1,4 +1,4 @@
-package com.newcitysoft.study.zookeeper.module.technology.netty.bio;
+package com.newcitysoft.study.zookeeper.module.technology.netty;
 
 /**
  * @author lixin.tian@renren-inc.com

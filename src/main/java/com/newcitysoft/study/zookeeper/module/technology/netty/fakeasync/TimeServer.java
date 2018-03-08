@@ -1,12 +1,14 @@
-package com.newcitysoft.study.zookeeper.module.technology.netty.bio;
+package com.newcitysoft.study.zookeeper.module.technology.netty.fakeasync;
 
 import com.newcitysoft.study.zookeeper.module.technology.netty.Const;
+import com.newcitysoft.study.zookeeper.module.technology.netty.bio.TimeServerHandler;
 
 import java.io.IOException;
 import java.net.ServerSocket;
 import java.net.Socket;
 
 /**
+ * 伪异步IO
  * @author lixin.tian@renren-inc.com
  * @date 2018/3/8 13:38
  */
@@ -26,11 +28,10 @@ public class TimeServer {
             server = new ServerSocket(port);
             System.out.println("The time server is start in port:" + port);
             Socket socket = null;
+            TimeServerHandlerExecutePool singleExecutor = new TimeServerHandlerExecutePool(50, 1000);
             while (true) {
-                System.out.println("开始等待...");
                 socket = server.accept();
-                System.out.println("获取连接:"+socket);
-                new Thread(new TimeServerHandler(socket)).start();
+                singleExecutor.execute(new TimeServerHandler(socket));
             }
         } finally {
             if(server != null) {

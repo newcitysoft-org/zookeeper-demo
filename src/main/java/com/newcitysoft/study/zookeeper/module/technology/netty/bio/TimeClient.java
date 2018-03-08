@@ -1,5 +1,7 @@
 package com.newcitysoft.study.zookeeper.module.technology.netty.bio;
 
+import com.newcitysoft.study.zookeeper.module.technology.netty.Const;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -32,8 +34,8 @@ public class TimeClient {
             out = new PrintWriter(socket.getOutputStream());
             Thread.sleep(5000);
             out.println("QUERY TIME ORDER");
+            out.flush();
             System.out.println("Send order 2 server succeed.");
-
             String resp = in.readLine();
             System.out.println("Now is :" +resp);
         } catch (IOException e) {
