@@ -1,4 +1,4 @@
-package com.newcitysoft.study.zookeeper.module.net.technology.netty;
+package com.newcitysoft.study.zookeeper.module.net.scene.socket;
 
 /**
  * @author lixin.tian@renren-inc.com
@@ -7,4 +7,5 @@ package com.newcitysoft.study.zookeeper.module.net.technology.netty;
 public class Const {
 
     public static final int BIO_PORT = 5566;
+    public static final int NETTY_PORT = 6789;
 }

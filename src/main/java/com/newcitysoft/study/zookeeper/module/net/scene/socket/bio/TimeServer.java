@@ -1,6 +1,6 @@
-package com.newcitysoft.study.zookeeper.module.net.technology.netty.bio;
+package com.newcitysoft.study.zookeeper.module.net.scene.socket.bio;
 
-import com.newcitysoft.study.zookeeper.module.net.technology.netty.Const;
+import com.newcitysoft.study.zookeeper.module.net.scene.socket.Const;
 
 import java.io.IOException;
 import java.net.ServerSocket;

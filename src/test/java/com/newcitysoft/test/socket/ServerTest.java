@@ -1,7 +1,7 @@
 package com.newcitysoft.test.socket;
 
-import com.newcitysoft.study.zookeeper.module.scene.communication.multi.MiniServer;
-import com.newcitysoft.study.zookeeper.module.scene.communication.simple.Const;
+import com.newcitysoft.study.zookeeper.module.net.scene.communication.multi.MiniServer;
+import com.newcitysoft.study.zookeeper.module.net.scene.communication.simple.Const;
 
 import java.io.IOException;
 

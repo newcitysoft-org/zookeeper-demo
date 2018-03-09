@@ -1,6 +1,6 @@
-package com.newcitysoft.study.zookeeper.module.net.technology.netty.bio;
+package com.newcitysoft.study.zookeeper.module.net.scene.socket.bio;
 
-import com.newcitysoft.study.zookeeper.module.net.technology.netty.Const;
+import com.newcitysoft.study.zookeeper.module.net.scene.socket.Const;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -15,7 +15,7 @@ import java.net.Socket;
 public class TimeClient {
 
     public static void main(String[] args) throws InterruptedException {
-        int port = Const.BIO_PORT;
+        int port = Const.NETTY_PORT;
         if(args!=null && args.length>0) {
             try {
                 port = Integer.parseInt(args[0]);
@@ -32,12 +32,14 @@ public class TimeClient {
             socket = new Socket("127.0.0.1", port);
             in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
             out = new PrintWriter(socket.getOutputStream());
-            Thread.sleep(5000);
-            out.println("QUERY TIME ORDER");
-            out.flush();
-            System.out.println("Send order 2 server succeed.");
-            String resp = in.readLine();
-            System.out.println("Now is :" +resp);
+            while (true) {
+                Thread.sleep(2000);
+                out.println("QUERY TIME ORDER$_");
+                out.flush();
+                System.out.println("Send order 2 server succeed.");
+                String resp = in.readLine();
+                System.out.println("Now is :" +resp);
+            }
         } catch (IOException e) {
             e.printStackTrace();
         } finally {
