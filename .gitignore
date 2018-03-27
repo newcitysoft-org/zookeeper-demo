@@ -1,0 +1,20 @@
+*.class
+
+# Mobile Tools for Java (J2ME)
+.mtj.tmp/
+
+# Package Files #
+*.jar
+*.war
+*.ear
+
+*.checkstyle
+*.classpath
+*.project
+*.prefs
+/target
+/out
+/META-INF
+/log
+.idea
+/*.iml
