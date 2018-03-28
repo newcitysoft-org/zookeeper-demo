@@ -110,6 +110,8 @@ ZooKeeper用于选举一个集群内的主节点，以便跟踪可用的服务 �
 
 [【分布式】Zookeeper应用场景](https://www.cnblogs.com/leesf456/p/6036548.html)
 
+[demo zookeeper](https://github.com/Suzhida/demo_zookeeper)
+
 ## 四、各场景的案例实现
 #### 1.监听点可以在创建节点之前创建；
 #### 2.针对于某个znode的监听点（子节点改变或数据改变），可以在其他znode创建；
